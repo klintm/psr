@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="base.css" rel="stylesheet">
+    <link href="header.css" rel="stylesheet">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="custom-icon-search" viewBox="0 0 100 100">
+            <circle r="30" cy="40" cx="40"></circle>
+            <path d="M 61 61 L 90 90"></path>
+        </symbol>
+        <symbol id="custom-icon-user" viewBox="0 0 100 100">
+            <circle r="22" cx="50" cy="30"></circle>
+            <path d="M 10 95 C 10 55 90 55 90 95"></path>
+        </symbol>
+        <symbol id="custom-icon-cart" viewBox="0 0 100 100">
+            <path d="M 0 5 H 15 L 20 65 H 85 L 92 15 H 30"></path>
+            <circle r="10" cx="30" cy="85"></circle>
+            <circle r="10" cx="75" cy="85"></circle>
+        </symbol>
+        <symbol id="custom-icon-menu" viewBox="0 0 100 100">
+            <path d="M 10 18 H 90 M 10 50 H 90 M 10 82 H 90"></path>
+        </symbol>
+        <symbol id="custom-icon-close" viewBox="0 0 100 100">
+            <path d="M 10 10 L 90 90 M 10 90 L 90 10"></path>
+        </symbol>
+        <symbol id="custom-icon-arrow" viewBox="0 0 100 100">
+            <path d="M 20 35 L 50 65 L 80 35"></path>
+        </symbol>
+    </svg>
+</head>
+<body id="body">
+    <header class="header">
+        <div class="logo">
+            <a class="logo-link" href="">
+                <img class="logo-image" src="images/psr_logo.webp">
+            </a>
+        </div>
+        <nav class="nav" id="nav">
+            <button class="header-button nav-button-close" id="nav-button-close">
+                <svg class="header-icon" viewBox="0 0 100 100">
+                    <use href="#custom-icon-close"></use>
+                </svg>
+            </button>
+            <ul class="list-style-none nav-list">
+                <li class="nav-item" id="nav-item-1">
+                    <button class="nav-link" onclick="document.getElementById('nav-item-1').classList.add('open');">
+                        <span>Products</span>
+                        <svg class="header-icon" viewBox="0 0 100 100">
+                            <use href="#custom-icon-arrow"></use>
+                        </svg>
+                    </button>
+                    <div class="nav-subpage">
+                        <button class="header-button subpage-back-button" onclick="document.getElementById('nav-item-1').classList.remove('open');">
+                            <svg class="header-icon" viewBox="0 0 100 100">
+                                <use href="#custom-icon-arrow"></use>
+                            </svg>
+                            <span>Back</span>
+                        </button>
+                        <ul class="list-style-none nav-child-list">
+                            <li class="nav-child-item">
+                                <a class="nav-child-link" href="">Toner Cartridges</a>
+                            </li>
+                            <li class="nav-child-item">
+                                <a class="nav-child-link" href="">Scale Labels</a>
+                            </li>
+                            <li class="nav-child-item">
+                                <a class="nav-child-link" href="">Thermal Labels</a>
+                            </li>
+                            <li class="nav-child-item">
+                                <a class="nav-child-link" href="">More</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item" id="nav-item-1">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item" id="nav-item-1">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="header-button" id="nav-button-open">
+            <svg class="header-icon" viewBox="0 0 100 100">
+                <use href="#custom-icon-menu"></use>
+            </svg>
+        </button>
+    </header>
+    <script src="header.js"></script>
+</body>
+</html>

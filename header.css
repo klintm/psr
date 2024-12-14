@@ -1,0 +1,151 @@
+.header {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 5%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 1.5rem;
+}
+
+.header button,
+.header input {
+    font-family: inherit;
+}
+
+.header button {
+    cursor: pointer;
+}
+
+.header-icon {
+    display: block;
+    width: auto;
+    height: 2rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 7;
+}
+
+.header-button {
+    border: 0;
+    border-radius: 0;
+    padding: 1.5rem;
+    background-color: transparent;
+}
+
+.list-style-none {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-image {
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 3.5rem;
+}
+
+.nav {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5rem 0;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-5rem);
+    transition: transform .2s ease, opacity .2s ease, visibility .3s ease;
+}
+
+.nav.open {
+    visibility: visible;
+    opacity: 1;
+    transform: initial;
+}
+
+.nav-button-close {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+
+.nav-list {
+    padding: 3rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    padding: 1.5rem 0;
+    background-color: transparent;
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 1.8rem;
+    font-weight: var(--font-heading-weight);
+}
+
+.nav-link
+.header-icon {
+    transform: rotate(-90deg);
+}
+
+.nav-subpage {
+    position: fixed;
+    z-index: 10;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 3rem;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform .2s ease, opacity .2s ease, visibility .3s ease;
+}
+
+.nav-item.open
+.nav-subpage {
+    visibility: visible;
+    opacity: 1;
+    transform: initial;
+}
+
+.subpage-back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.subpage-back-button
+.header-icon {
+    margin-right: 1rem;
+    transform: rotate(90deg);
+}
+
+.nav-child-link {
+    display: inline-block;
+    padding: 1.5rem 0;
+    color: inherit;
+    text-decoration: inherit;
+    font-size: 1.7rem;
+    font-weight: var(--font-heading-weight);
+}
